@@ -19,6 +19,19 @@ public class Location {
 
     @Column(name = "lon")
     private Double lon;
+    
+    @JsonInclude(Include.NON_EMPTY)
+@Column(name = "description")
+private String description;
+
+@JsonInclude(Include.NON_EMPTY)
+public String getDescription() {
+    return description;
+}
+
+public void setDescription(String description) {
+    this.description = description;
+}
 
     public Location() {
     }
